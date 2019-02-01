@@ -2,7 +2,7 @@
 
 Data Skew Profiler for HPCC Systems
 
-#Project Overview
+## Project Overview
 
 The purpose of the project is to analyze the execution graphs for various jobs and find a correlation between the data skew and performance skew.
 Data skew : How the data is distributed on the cluster.
@@ -10,19 +10,19 @@ Performance skew : How much more load a single node has to take in processing th
 
 Once that is done the performance skew is minimized by redistributing the data in the most efficient way possible.
 
-#Cluster Details
+## Cluster Details
 
 Hosted on AWS
 Number of Thor master nodes:1
 Number of Thor slave nodes: 3
 
-#Dataset Details
+## Dataset Details
 
 Dataset: IMDB dataset 
 The dataset contains a list of actors and actresses and a list of Movies/TV shows each actor has performed in.
 Dataset download link : (ftp server) ftp://ftp.fu-berlin.de/pub/misc/movies/database/ 
 
-#Query Details
+## Query Details
 
 The queries used to runs jobs which are used to build and test the model are explained in the "Six Degrees of Kevin Bacon" pdf.
 Link: cdn.hpccsystems.com/releases/CE-Candidate-5.0.2/docs/IMDB-5.0.2-1.pdf.
@@ -38,7 +38,7 @@ After running the jobs, the graphs were analyzed and 7 types of queries were ide
 
 A dataset is created using these query types as features upon which the model will be trained.
 
-#Random Forest Model
+## Random Forest Model
 
 The program employs a random forest emsemble which is trained by the data and the corresponding skew from the dataset that was created in the previous stage. 
 Takes the frequency of each of the 7 types of queries in a workunit as input, and profile the relative impact of skew on the impact in 3 levels.
